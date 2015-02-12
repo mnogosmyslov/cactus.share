@@ -1,5 +1,7 @@
 package org.cactus.share.vo;
 
+import org.cactus.share.enums.UserAccountRoleEnum;
+
 import java.io.Serializable;
 
 public class UserAccountVO extends AbstractVO implements Serializable {
@@ -8,7 +10,8 @@ public class UserAccountVO extends AbstractVO implements Serializable {
     private String email;
     private String password;
     private String login;
-    //private UserRole role;
+    private UserAccountRoleEnum role;
+    private String photo;
 
 
     public long getId() {
@@ -41,5 +44,21 @@ public class UserAccountVO extends AbstractVO implements Serializable {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public UserAccountRoleEnum getRole() {
+        return role;
+    }
+
+    public void setRole(UserAccountRoleEnum role) {
+        this.role = role;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }
