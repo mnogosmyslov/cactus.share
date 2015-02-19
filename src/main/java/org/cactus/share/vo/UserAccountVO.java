@@ -2,13 +2,20 @@ package org.cactus.share.vo;
 
 import org.cactus.share.enums.UserAccountRoleEnum;
 
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 public class UserAccountVO extends AbstractVO implements Serializable {
 
     private long id;
-    private String email;
-    private String password;
+
+	@Pattern(regexp = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}")
+	private String email;
+
+	@Pattern(regexp = "^(?=.*d)(?=.*[a-zA-Z]).{6,20}$")
+	private String password;
+
+	@Pattern(regexp = "/^[a-zA-Z0-9]{4,10}$/")
     private String login;
     private UserAccountRoleEnum role;
     private String photo;
