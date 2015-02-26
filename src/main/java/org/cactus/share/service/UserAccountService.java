@@ -9,8 +9,8 @@ public interface UserAccountService {
     UserAccountVO getAccount(String email);
     UserAccountVO getById(long id);
     UserAccountVO getByLogin(String login);
-    UserAccountVO createUserAccount(UserAccountVO userAccount);
-    UserAccountVO updateUserAccount(UserAccountVO userAccount);
+    void createUserAccount(UserAccountVO userAccountVO);
+    UserAccountVO updateUserAccount(UserAccountVO userAccountVO);
     void deleteUserAccount(long id);
     List getAllUserAccount();
 
