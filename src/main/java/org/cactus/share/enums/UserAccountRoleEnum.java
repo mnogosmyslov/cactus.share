@@ -5,6 +5,6 @@ import java.io.Serializable;
 public enum UserAccountRoleEnum implements Serializable {
 
     ROLE_USER,
-    ROLE_ANONYMOUS;
+    ROLE_ANONYMOUS
 
 }
