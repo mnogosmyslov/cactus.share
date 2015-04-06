@@ -21,6 +21,12 @@ public class UserAccountVO extends AbstractVO implements Serializable {
 	@NotNull
 	@Pattern(regexp = "/^[a-zA-Z0-9]{4,10}$/")
     private String login;
+
+    private String name;
+
+//    TODO return contacts
+//    private Set<UserAccountVO> contacts = new HashSet<UserAccountVO>();
+
     private UserAccountRoleEnum role;
     private String photo;
 
@@ -64,6 +70,23 @@ public class UserAccountVO extends AbstractVO implements Serializable {
     public void setRole(UserAccountRoleEnum role) {
         this.role = role;
     }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+//    public Set<UserAccountVO> getContacts() {
+//        return contacts;
+//    }
+//
+//    public void setContacts(Set<UserAccountVO> contacts) {
+//        this.contacts = contacts;
+//    }
 
     public String getPhoto() {
         return photo;
