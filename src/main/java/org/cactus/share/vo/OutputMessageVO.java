@@ -7,7 +7,8 @@ public class OutputMessageVO extends MessageVO  {
     private Date time;
 
     public OutputMessageVO(MessageVO original, Date time) {
-        super(original.getId(), original.getMessage());
+        //TODO: Uncomment, if this class will be in demand again
+        //super(original.getId(), original.getMessage());
         this.time = time;
     }
 
