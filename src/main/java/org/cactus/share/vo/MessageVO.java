@@ -4,27 +4,27 @@ import java.util.Date;
 
 public class MessageVO {
 
-    private int id;
+    private long id;
     private String message;
-    private int authorId;
+    private long authorId;
     private Date date;
 
     public MessageVO() {
 
     }
 
-    public MessageVO(int id, String message, int authorId, Date date) {
+    public MessageVO(long id, String message, long authorId, Date date) {
         this.id = id;
         this.message = message;
         this.authorId = authorId;
         this.date = date;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -36,11 +36,11 @@ public class MessageVO {
         this.message = message;
     }
 
-    public int getAuthorId() {
+    public long getAuthorId() {
         return authorId;
     }
 
-    public void setAuthorId(int authorId) {
+    public void setAuthorId(long authorId) {
         this.authorId = authorId;
     }
 
