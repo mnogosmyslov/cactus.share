@@ -5,17 +5,19 @@ import org.cactus.share.enums.UserAccountRoleEnum;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 public class UserAccountVO extends AbstractVO implements Serializable {
 
-    private long id;
+    private Long id;
 
 	@NotNull
-	@Pattern(regexp = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}")
+	@Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
 	private String email;
 
 	@NotNull
-	@Pattern(regexp = "^(?=.*d)(?=.*[a-zA-Z]).{6,20}$")
+	@Pattern(regexp = "^(?=.*d)(?=.*[a-zA-Z]).{8,60}$")
 	private String password;
 
 	@NotNull
@@ -24,18 +26,18 @@ public class UserAccountVO extends AbstractVO implements Serializable {
 
     private String name;
 
-//    TODO return contacts
-//    private Set<UserAccountVO> contacts = new HashSet<UserAccountVO>();
+    private Set<Long> contacts = new HashSet<Long>(0);
 
     private UserAccountRoleEnum role;
     private String photo;
 
+    public UserAccountVO() {}
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -71,7 +73,6 @@ public class UserAccountVO extends AbstractVO implements Serializable {
         this.role = role;
     }
 
-
     public String getName() {
         return name;
     }
@@ -80,13 +81,13 @@ public class UserAccountVO extends AbstractVO implements Serializable {
         this.name = name;
     }
 
-//    public Set<UserAccountVO> getContacts() {
-//        return contacts;
-//    }
-//
-//    public void setContacts(Set<UserAccountVO> contacts) {
-//        this.contacts = contacts;
-//    }
+    public Set<Long> getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(Set<Long> contacts) {
+        this.contacts = contacts;
+    }
 
     public String getPhoto() {
         return photo;
