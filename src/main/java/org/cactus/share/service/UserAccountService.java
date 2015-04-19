@@ -10,7 +10,6 @@ public interface UserAccountService {
     UserAccountVO getAccount(String email);
     UserAccountVO getById(long id);
     UserAccountVO getByLogin(String login);
-    UserAccountVO getUserWithoutPass(String login);
     void createUserAccount(UserAccountVO userAccountVO) throws SQLException;
     void updateUserAccount(UserAccountVO userAccountVO) throws SQLException;
     void deleteUserAccount(long id) throws SQLException;
