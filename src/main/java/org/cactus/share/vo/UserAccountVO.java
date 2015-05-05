@@ -2,8 +2,6 @@ package org.cactus.share.vo;
 
 import org.cactus.share.enums.UserAccountRoleEnum;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,16 +10,10 @@ public class UserAccountVO extends AbstractVO implements Serializable {
 
     private Long id;
 
-	@NotNull
-	@Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
 	private String email;
 
-	@NotNull
-	@Pattern(regexp = "^(?=.*d)(?=.*[a-zA-Z]).{8,60}$")
 	private String password;
 
-	@NotNull
-	@Pattern(regexp = "/^[a-zA-Z0-9]{4,10}$/")
     private String login;
 
     private String name;

@@ -3,6 +3,7 @@ package org.cactus.share.service;
 import org.cactus.share.vo.UserAccountVO;
 
 import java.sql.SQLException;
+import java.util.HashSet;
 import java.util.List;
 
 public interface UserAccountService {
@@ -15,5 +16,5 @@ public interface UserAccountService {
     void deleteUserAccount(long id) throws SQLException;
     List getAllUserAccount();
     void addContact(long id, String login);
-
+    HashSet getAllContacts(UserAccountVO userAccountVO);
 }
