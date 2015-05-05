@@ -8,7 +8,7 @@ public class ChatVO extends AbstractVO implements Serializable {
 
 	private Long chatId;
 	private String chatName;
-	private Set<UserAccountVO> members = new HashSet<UserAccountVO>();
+	private Set<UserVO> members = new HashSet<UserVO>();
 	private String last_message;
 	private boolean secure;
 
@@ -31,11 +31,11 @@ public class ChatVO extends AbstractVO implements Serializable {
 		this.chatName = chatName;
 	}
 
-	public Set<UserAccountVO> getMembers() {
+	public Set<UserVO> getMembers() {
 		return members;
 	}
 
-	public void setMembers(Set<UserAccountVO> members) {
+	public void setMembers(Set<UserVO> members) {
 		this.members = members;
 	}
 
