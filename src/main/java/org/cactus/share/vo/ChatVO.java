@@ -8,7 +8,7 @@ public class ChatVO extends AbstractVO {
 	private Long chatId;
 	private String chatName;
 	private Set<UserVO> members = new HashSet<UserVO>();
-	private String last_message;
+	private MessageVO last_message;
 	private boolean secure;
 
 	public ChatVO() {
@@ -38,11 +38,11 @@ public class ChatVO extends AbstractVO {
 		this.members = members;
 	}
 
-	public String getLast_message() {
+	public MessageVO getLast_message() {
 		return last_message;
 	}
 
-	public void setLast_message(String last_message) {
+	public void setLast_message(MessageVO last_message) {
 		this.last_message = last_message;
 	}
 
