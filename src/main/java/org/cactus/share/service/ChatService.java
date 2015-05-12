@@ -6,6 +6,7 @@ import java.util.HashSet;
 
 public interface ChatService {
 	void addChat(ChatVO chat);
+	void newChat(long userId, String login);
 	ChatVO getChat(Long id);
 	HashSet getAllChats(Long userAccountId);
 	void updateChat(ChatVO chat);

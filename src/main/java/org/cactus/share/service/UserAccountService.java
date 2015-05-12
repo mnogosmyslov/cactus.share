@@ -17,6 +17,6 @@ public interface UserAccountService {
     void updateUserAccount(UserAccountVO userAccountVO) throws SQLException;
     void deleteUserAccount(long id) throws SQLException;
     List getAllUserAccount();
-    void addContact(long id, String login);
+    boolean addContact(long id, String login);
     HashSet getAllContacts(UserVO userVO);
 }

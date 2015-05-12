@@ -2,9 +2,7 @@ package org.cactus.share.vo;
 
 import org.cactus.share.enums.UserAccountRoleEnum;
 
-import java.io.Serializable;
-
-public class UserVO extends AbstractVO implements Serializable {
+public class UserVO extends AbstractVO {
 	private Long id;
 
 	private String email;

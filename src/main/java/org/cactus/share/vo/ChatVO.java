@@ -1,10 +1,9 @@
 package org.cactus.share.vo;
 
-import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ChatVO extends AbstractVO implements Serializable {
+public class ChatVO extends AbstractVO {
 
 	private Long chatId;
 	private String chatName;

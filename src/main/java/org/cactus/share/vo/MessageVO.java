@@ -2,7 +2,7 @@ package org.cactus.share.vo;
 
 import java.util.Date;
 
-public class MessageVO {
+public class MessageVO extends AbstractVO {
 
     private long id;
     private String message;
